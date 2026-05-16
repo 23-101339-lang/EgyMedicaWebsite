@@ -1,0 +1,111 @@
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--surface-medium);
+    overflow: hidden;
+    padding-bottom: var(--space-md);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.footer-logo span {
+    color: var(--accent-teal);
+}
+
+.footer-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.footer-links-grid {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.footer-column h3 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-column a {
+    display: block;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-column a:hover {
+    color: var(--accent-teal);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--surface-heavy);
+    padding-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    z-index: 2;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--text-primary);
+}
+
+.footer-glow {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}

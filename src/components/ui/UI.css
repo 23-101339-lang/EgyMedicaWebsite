@@ -1,0 +1,39 @@
+/* Core UI Component CSS */
+.glow-card {
+    position: relative;
+    background: var(--surface-light);
+    border: 1px solid var(--surface-medium);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.glow-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+}
+
+.glow-card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity var(--transition-fast);
+    opacity: 0;
+}
+
+.glow-card:hover .glow-card-background {
+    opacity: 1;
+}
+
+.glow-card-content {
+    position: relative;
+    z-index: 2;
+    padding: var(--space-md);
+    height: 100%;
+}
